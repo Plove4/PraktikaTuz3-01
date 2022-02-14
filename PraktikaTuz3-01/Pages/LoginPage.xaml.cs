@@ -48,15 +48,15 @@ namespace PraktikaTuz3_01.Pages
                 switch (usr.roleId)
                 {
                     case 1:
-                        FrameManeger.frmMain.Navigate(new DirectorPage());
+                        FrameManeger.frmMain.Navigate(new DirectorPage(usr));
                         break;
 
                     case 2:
-                        FrameManeger.frmMain.Navigate(new ManegerPage());
+                        FrameManeger.frmMain.Navigate(new ManegerPage(usr));
                         break;
 
                     case 3:
-                        FrameManeger.frmMain.Navigate(new AdminPage());
+                        FrameManeger.frmMain.Navigate(new AdminPage(usr));
                         break;
                 }
             }

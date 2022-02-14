@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PraktikaTuz3_01.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,16 @@ namespace PraktikaTuz3_01.Pages
     /// </summary>
     public partial class DirectorPage : Page
     {
-        public DirectorPage()
+        private Users menuser;
+        public DirectorPage(Users users)
         {
             InitializeComponent();
+
+            menuser = users;
+
+            Hellotext.Text = $"Добро пожаловать, {menuser?.FIO}";
+
+            this.Title = $"Меню {menuser?.Roles.name}";
         }
     }
 }

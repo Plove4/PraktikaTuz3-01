@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PraktikaTuz3_01.Entities;
 
 namespace PraktikaTuz3_01.Pages
 {
@@ -20,9 +21,16 @@ namespace PraktikaTuz3_01.Pages
     /// </summary>
     public partial class ManegerPage : Page
     {
-        public ManegerPage()
+        private Users menuUser;
+        public ManegerPage(Users users)
         {
             InitializeComponent();
+
+            menuUser = users;
+
+            Hellotext.Text = $"Добро пожаловать, {menuUser?.FIO}!";
+
+            this.Title = $"Меню {menuUser?.Roles.name}";
         }
     }
 }
