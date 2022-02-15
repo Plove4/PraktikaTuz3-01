@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PraktikaTuz3_01"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="500">
+        Title="{Binding Content.Title, ElementName=frmMain}"
+        Height="300" Width="500">
     <Grid>
         <Frame Name="frmMain" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
