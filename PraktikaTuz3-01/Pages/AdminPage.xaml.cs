@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using PraktikaTuz3_01.Entities;
+using PraktikaTuz3_01.Utiliites;
 
 namespace PraktikaTuz3_01.Pages
 {
@@ -31,6 +32,16 @@ namespace PraktikaTuz3_01.Pages
             Hellotext.Text = $"Добро пожаловать, {menuser?.FIO}!";
 
             this.Title = $"Меню {menuser?.Roles.name}";
+        }
+
+        private void AccountButn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddButn_Click(object sender, RoutedEventArgs e)
+        {
+            FrameManeger.frmMain.Navigate(new AddUserPage(null));
         }
     }
 }
